@@ -43,7 +43,7 @@ def listar():
             print(f'Estoque: {produto[3]}')
     else:
         print('Não existem produtos cadastrados.')
-    desconectar(conn)
+    menu()
 
 def inserir():
     """
@@ -63,7 +63,7 @@ def inserir():
         print(f'O produto {nome} foi inserido com sucesso.')
     else:
         print('Não foi possível inserir o produto.')
-    desconectar(conn)
+    menu()
 
 def atualizar():
     """
@@ -84,7 +84,7 @@ def atualizar():
         print(f'O produto {nome} foi atualizado com sucesso.')
     else:
         print('Não foi possível inserir o produto.')
-    desconectar(conn)
+    menu()
 
 def deletar():
     """
@@ -102,13 +102,13 @@ def deletar():
         print(f'O ID {codigo} foi excluído com sucesso.')
     else:
         print('Não foi possível excluir o produto.')
-    desconectar(conn)
+    menu()
 
 def menu():
     """
     Função para gerar o menu inicial
     """
-    print('=========Gerenciamento de Produtos==============')
+    print('\n=========Gerenciamento de Produtos==============')
     print('Selecione uma opção: ')
     print('1 - Listar produtos.')
     print('2 - Inserir produtos.')
